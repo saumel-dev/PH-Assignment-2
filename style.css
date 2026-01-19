@@ -1,46 +1,56 @@
 /* Common classes */
 .inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
 }
-*{
+
+* {
     margin: 0px;
     padding: 0px;
 }
-.common-container{
+
+.common-container {
     max-width: 1600px;
     margin: 0 auto;
 }
-.primary-color{
+
+.primary-color {
     background-color: #1A0B2E;
 }
-.linear-gradient{
-    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+
+.linear-gradient {
+    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
 }
+
 /* Common classes */
-/* navbar */
-.navbar{
+
+/* navbar style start*/
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.nav-img{
+
+.nav-img {
     max-height: 32px;
     max-width: 219px;
 }
-.nav-items ul{
+
+.nav-items ul {
     display: flex;
     gap: 32px;
     list-style: none;
 }
-.nav-items a{
+
+.nav-items a {
     text-decoration: none;
     color: white;
     line-height: 120%;
 }
-.navbar button{
+
+.navbar button {
     border: none;
     display: flex;
     align-items: center;
@@ -48,4 +58,184 @@
     border-radius: 10000px;
     color: white;
     cursor: pointer;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+/* navbar style finished*/
+
+/* banner style start */
+.banner-container {
+    height: 760px;
+    background: url("assets/hero-bg.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+.b-i-2 {
+    position: absolute;
+    left: 47%;
+    top: 25%;
+}
+
+.banner-bg-img p {
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    background-color: #00FF88;
+    max-width: 35px;
+    border-radius: 1000px;
+    font-size: 1.125rem;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    font-weight: 600;
+    padding-right: 24px;
+}
+
+.banner-bg-img {
+    position: absolute;
+    left: 41%;
+    top: 15%;
+
+}
+.banner-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 450px;
+}
+.banner-info h1{
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: white;
+}
+.banner-info p{
+    font-weight: 200;
+    color: white;
+}
+.banner-btns
+{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 20px;
+}
+.banner-btn1, .banner-btn2 {
+    transition: 0.2s; 
+}
+.banner-btn1:hover, .banner-btn2:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+.banner-btn1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10000px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.banner-btn2{
+    border: 1px solid #00FF88;
+    color: #00FF88;
+    border-radius: 10000px;
+    padding: 12px 20px;
+    background: transparent;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* responsive design */
+@media screen and (max-width:576px) {
+
+    .nav-items,
+    .navbar button {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .nav-img {
+        max-height: 20px;
+        max-width: 130px;
+        padding-left: 20px;
+    }
+
+    .navbar {
+        background-size: cover;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .banner-container {
+        height: 540px;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .b-i-1 img {
+        width: 200px;
+        height: auto;
+    }
+
+    .b-i-2 img {
+        width: 55px;
+    }
+
+    .banner-bg-img {
+        position: absolute;
+        left: 33%;
+        top: 40%;
+    }
+
+    .banner-bg-img2 {
+        position: absolute;
+        left: 46%;
+        top: 53%;
+    }
+
+    .banner-bg-img p {
+        position: absolute;
+        top: 7%;
+        width: 25px;
+        font-size: 0.9rem;
+        padding-right: 24px;
+    }
+    .banner-info{
+        padding-top: 350px;
+    }
+    .banner-info h1{
+        font-size: 2.5rem;
+    }
+    .banner-info p{
+        width: 370px;
+        text-align: center;
+    }
 }
