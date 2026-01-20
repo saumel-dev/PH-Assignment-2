@@ -245,11 +245,19 @@
         transform: translateY(-15px);
     }
 }
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.6));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 136, 1));
+    }
+}
 .b-i-2 {
     animation: float 3s ease-in-out infinite;
 }
 .banner-bg-img p {
-    animation: glow 2s infinite ease-in-out;
+    animation: glow 2s ease-in-out infinite;
 }
 
 /* grid section */
@@ -400,6 +408,52 @@
     align-items: center;
     border-radius: 50%;
 }
+.hs{
+    padding-bottom: 40px;
+}
+/* footer section */
+.footer-container{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.f-c{
+    background-image: url("assets/footer-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+.footer-container h1{
+    color: white;
+    font-size: 3.75rem;
+    padding-top: 40px;
+    text-align: center;
+}
+.footer-social{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 40px;
+    padding-top: 32px;
+}
+.social-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5px;
+}
+.social-item a{
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+.footer-container p{
+    color: white;
+    padding-top: 32px;
+    text-align: center;
+    font-weight: 200;
+}
 /* responsive design */
 @media screen and (max-width:576px) {
 
@@ -501,5 +555,27 @@
     .feature-card{
         flex-direction: column;
         align-items: center;
+    }
+    .host-card{
+        width: 80%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .social {
+        justify-content: center;
+    }
+    .footer-container{
+        background-position: center;
+        height: 200px;
+        padding-bottom: 30px;
+    }
+    .footer-social{
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .footer-container p{
+        margin-bottom: 20px;
     }
 }
