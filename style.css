@@ -22,7 +22,18 @@
     background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
 }
 
-/* Common classes */
+.gradient-text {
+    background-image: linear-gradient(to right, 
+        rgba(255, 255, 255, 1), 
+        rgba(247, 233, 63, 1), 
+        rgba(251, 9, 180, 1), 
+        rgba(145, 0, 248, 1)
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+/* Common classes end*/
 
 /* navbar style start*/
 .navbar {
@@ -245,17 +256,23 @@
         transform: translateY(-15px);
     }
 }
+
 @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
         filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.6));
     }
+
     50% {
         filter: drop-shadow(0 0 20px rgba(0, 255, 136, 1));
     }
 }
+
 .b-i-2 {
     animation: float 3s ease-in-out infinite;
 }
+
 .banner-bg-img p {
     animation: glow 2s ease-in-out infinite;
 }
@@ -331,56 +348,67 @@
     line-height: 24px;
     font-weight: 100;
 }
+
 /* feature style */
-.feature{
+.feature {
     color: white;
 }
-.feature-title{
+
+.feature-title {
     text-align: center;
     font-size: 3rem;
     padding-top: 120px;
     padding-bottom: 30px;
 }
-.feature-card{
+
+.feature-card {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-.f-card{
+
+.f-card {
     background-color: #230E3D;
     width: 400px;
     border: none;
     border-radius: 20px;
 }
-.f-card iframe{
+
+.f-card iframe {
     border-radius: 20px;
 }
-.card-info h3{
+
+.card-info h3 {
     padding-top: 12px;
     padding-left: 24px;
 }
-.card-info p{
+
+.card-info p {
     height: 75px;
     padding: 12px 24px;
     font-weight: 150;
 }
-.card-bottom{
+
+.card-bottom {
     display: flex;
     gap: 10px;
     padding-left: 20px;
     padding-bottom: 24px;
 }
+
 /* host section */
-.host{
+.host {
     display: flex;
 }
-.host-title{
+
+.host-title {
     font-size: 3rem;
     color: white;
     text-align: center;
     padding-top: 120px;
 }
-.host-card{
+
+.host-card {
     color: white;
     display: flex;
     width: 1200px;
@@ -391,69 +419,82 @@
     margin-top: 40px;
     align-items: center;
 }
-.host-info{
+
+.host-info {
     padding-left: 25px;
 }
-.host-info h3{
+
+.host-info h3 {
     font-size: 2rem;
 }
-.host-info p{
+
+.host-info p {
     font-weight: 200;
     padding-top: 16px;
 }
-.social{
+
+.social {
     display: flex;
     padding-top: 20px;
     gap: 20px;
     align-items: center;
     border-radius: 50%;
 }
-.hs{
+
+.hs {
     padding-bottom: 40px;
 }
+
 /* footer section */
-.footer-container{
+.footer-container {
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.f-c{
+
+.f-c {
     background-image: url("assets/footer-bg.png");
     background-size: cover;
     background-position: center;
 }
-.footer-container h1{
+
+.footer-container h1 {
     color: white;
     font-size: 3.75rem;
     padding-top: 40px;
     text-align: center;
 }
-.footer-social{
+
+.footer-social {
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     gap: 40px;
     padding-top: 32px;
 }
+
 .social-item {
     display: flex;
     align-items: center;
     color: white;
     gap: 5px;
 }
-.social-item a{
+
+.social-item a {
     color: white;
     text-decoration: none;
     font-weight: 200;
 }
-.footer-container p{
+
+.footer-container p {
     color: white;
     padding-top: 32px;
     text-align: center;
     font-weight: 200;
 }
+
 /* responsive design */
 @media screen and (max-width:576px) {
 
@@ -543,39 +584,46 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    .grid-container{
+
+    .grid-container {
         grid-template-columns: 1fr;
         width: 90%;
         grid-template-rows: auto;
     }
-    .g-box{
+
+    .g-box {
         grid-column: 1;
         padding-bottom: 20px;
     }
-    .feature-card{
+
+    .feature-card {
         flex-direction: column;
         align-items: center;
     }
-    .host-card{
+
+    .host-card {
         width: 80%;
         flex-direction: column;
         text-align: center;
     }
+
     .social {
         justify-content: center;
     }
-    .footer-container{
+
+    .footer-container {
         background-position: center;
         height: 200px;
         padding-bottom: 30px;
     }
-    .footer-social{
+
+    .footer-social {
         grid-template-columns: repeat(2, auto);
         gap: 20px;
         justify-items: center;
     }
 
-    .footer-container p{
+    .footer-container p {
         margin-bottom: 20px;
     }
 }
