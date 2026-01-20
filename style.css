@@ -24,7 +24,7 @@
 
 .gradient-text {
     background-image: linear-gradient(to right, 
-        rgba(255, 255, 255, 1), 
+        rgba(251, 9, 180, 1), 
         rgba(247, 233, 63, 1), 
         rgba(251, 9, 180, 1), 
         rgba(145, 0, 248, 1)
@@ -133,6 +133,7 @@
 .banner-info p {
     font-weight: 200;
     color: white;
+    padding-top: 15px;
 }
 
 .banner-btns {
@@ -140,7 +141,7 @@
     justify-items: center;
     justify-content: center;
     gap: 25px;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .banner-btn1,
